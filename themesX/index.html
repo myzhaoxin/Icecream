@@ -1,0 +1,10 @@
+---
+layout: page
+title: Themen
+---
+
+<ul class="posts">
+{% for category in site.categories %}
+    <li><a href="/thema/{{ category | first }}">{{ category | first }} ({{ category | last | size }})</a></li>
+{% endfor %}
+</ul>

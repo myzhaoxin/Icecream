@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% include pages.html %}
+<div class="content">
+  <section class='post'>
+    <h1 class="upcase">
+      <div class='date'>{{ page.date | date_to_string }}</div>
+      {{ page.title }}
+      <div class='date'>{{ page.categories | join: ' , ' }}</div>
+    </h1>
+    {{ content }}
+    {% include signoff.html %}
+  </section>
+  
+{% if page.disqus != 'n' %}
+  {% include disqus.html %}
+{% endif %}
+
+</div>
+
+{% include links.html %}
